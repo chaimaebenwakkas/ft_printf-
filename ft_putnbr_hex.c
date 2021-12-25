@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base_ptr.c                               :+:      :+:    :+:   */
+/*   ft_putnbr_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cben-wak <cben-wak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/23 09:40:02 by cben-wak          #+#    #+#             */
-/*   Updated: 2021/12/23 10:27:41 by cben-wak         ###   ########.fr       */
+/*   Created: 2021/12/20 13:15:27 by cben-wak          #+#    #+#             */
+/*   Updated: 2021/12/25 16:20:08 by cben-wak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	calculate_length_ptr(unsigned long nb)
+int	count_base(long int nb)
 {
 	int	i;
 
@@ -27,17 +27,19 @@ static int	calculate_length_ptr(unsigned long nb)
 	return (i);
 }
 
-int	ft_putnbr_base_ptr(unsigned long nb, char *base)
+int	ft_putnbr_hex(long nb, char *base)
 {
-	if (nb <= (unsigned long)ft_strlen(base) - 1)
+	long long	n;
+
+	n = nb;
+	if (nb < 16)
 	{
 		ft_putchar(base[nb]);
 	}
 	else
 	{
-		ft_putnbr_base(nb / 16, base);
-		ft_putnbr_base(nb % 16, base);
+		ft_putnbr_hex(nb / 16, base);
+		ft_putnbr_hex(nb % 16, base);
 	}
-	return (calculate_length_ptr(nb));
- 
+	return (count_base(n));
 }

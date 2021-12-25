@@ -7,14 +7,13 @@ SRCS = ft_printf.c \
 		ft_putchar.c \
 		ft_putnbr.c \
 		ft_putstr.c \
-		ft_putnbr_base.c \
-		ft_strlen.c \
+		ft_putnbr_hex.c \
 		ft_putnbr_unsigned.c \
-		ptr_print.c \
-		ft_putnbr_base_ptr.c \
+		ft_putnbr_pointers.c \
+		ft_pointers.c \
 		
 
-OBJS := $(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
