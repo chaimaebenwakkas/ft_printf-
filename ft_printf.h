@@ -6,7 +6,7 @@
 /*   By: cben-wak <cben-wak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 15:40:07 by cben-wak          #+#    #+#             */
-/*   Updated: 2021/12/25 16:36:34 by cben-wak         ###   ########.fr       */
+/*   Updated: 2021/12/30 12:39:18 by cben-wak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_putnbr(int n);
 int		ft_putstr(char *str);
 int		ft_putnbr_hex(long nb, char *base);
 int		ft_putnbr_unsigned(unsigned int nb);
-int		ft_pointers(void *ptr);
 int		ft_putnbr_pointers(unsigned long nb, char *base);
+int		ft_pointers(void *ptr);
 
 #endif

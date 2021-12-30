@@ -6,7 +6,7 @@
 /*   By: cben-wak <cben-wak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 09:40:02 by cben-wak          #+#    #+#             */
-/*   Updated: 2021/12/25 16:27:27 by cben-wak         ###   ########.fr       */
+/*   Updated: 2021/12/30 12:25:26 by cben-wak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,17 @@ int	ft_putnbr_pointers(unsigned long nb, char *base)
 	}
 	else
 	{
-		ft_putnbr_hex(nb / 16, base);
-		ft_putnbr_hex(nb % 16, base);
+		ft_putnbr_pointers(nb / 16, base);
+		ft_putnbr_pointers(nb % 16, base);
 	}
 	return (calculate_length_ptr(nb));
+}
+
+int	ft_pointers(void *ptr)
+{
+	unsigned long	x;
+
+	x = (unsigned long)ptr;
+	ft_putstr("0x");
+	return (ft_putnbr_pointers(x, "0123456789abcdef") + 2);
 }

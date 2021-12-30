@@ -1,8 +1,8 @@
 NAME = libftprintf.a
 INC = ft_printf.h
-AR := ar rc
+AR = ar rc
 FLAGS = -Wall -Wextra -Werror
-REMOVE := rm -rf
+REMOVE = rm -rf
 SRCS = ft_printf.c \
 		ft_putchar.c \
 		ft_putnbr.c \
@@ -10,7 +10,6 @@ SRCS = ft_printf.c \
 		ft_putnbr_hex.c \
 		ft_putnbr_unsigned.c \
 		ft_putnbr_pointers.c \
-		ft_pointers.c \
 		
 
 OBJS = $(SRCS:.c=.o)
